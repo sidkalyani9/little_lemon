@@ -1,13 +1,16 @@
 import './App.css';
+import Nav from './Components/Nav';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <header className="App-header">
-    
-      </header>
-      <main>
-
+      
+      <main class="main">
+        <BrowserRouter>
+          <Nav />
+        </BrowserRouter>
+        
       </main>  
     </>
   );
