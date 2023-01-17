@@ -65,3 +65,37 @@
 .font1_5em{
     font-size: 1.5em;
 }
+
+.specials{
+    max-width: 870px;
+    margin:5em auto;
+    display: grid;
+    grid-row: 20% 80%;
+    grid-column: 1fr 1fr 1fr;
+}
+
+.specials .heading {
+    margin-top: 0.4em;
+}
+
+.inline_block{
+    display: inline-block;
+}
+
+.half{
+    display:grid;
+    grid-template-columns: 70% 1fr;
+    font-size: 1.3em;
+}
+
+.btn{
+    vertical-align: baseline !important;
+    font-size: 0.7em !important;
+    background-color:rgb(244, 206, 20);
+    box-shadow: none;
+    border-radius: 16px;
+    border:none;
+    font-weight: bold;
+    max-width: 200px;
+    height:4em;
+}
