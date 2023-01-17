@@ -1,3 +1,7 @@
+.alignRight{
+    text-align: right;
+}
+
 .main{
     margin: 1% 0%;
 }
@@ -53,7 +57,8 @@
 }
 
 .home .content .para{
-    font-size: 0.5em;
+    font-size: 0.6em;
+    max-width: 250px;
 }
 
 .home .content .img{
@@ -98,4 +103,56 @@
     font-weight: bold;
     max-width: 200px;
     height:4em;
+}
+
+
+.cardSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+    margin:4em 1em;
+    height:80%;
+    border-radius: 20px;;
+    padding:0em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 15% 35% 5%;
+    max-width: 270px;
+    background-color: rgb(236, 236, 236);
+    
+}
+
+.cardImg{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height:100%;
+}
+
+.cardHeading{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:0 1.2em;
+}
+
+.card .alignRight{
+    color:orange;
+}
+
+.cardDesc{
+    margin:0 1.6em;
+    text-align: left;
+    font-weight: 150;
+}
+
+.cardBtn{
+    border:none;
+    text-align: left;
+    background-color: transparent;
+    padding-left: 2vw;
+    padding-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
 }

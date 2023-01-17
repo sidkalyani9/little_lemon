@@ -9,7 +9,7 @@ function Home() {
                 <p class="para">
                 <span class="Yellow">Little Lemon</span><br></br>
                 <span class="font1_5em">Chicago</span><br /><br/>
-                asjndjabnsdjaisbd
+                We are a family owned Mediterannean restaurant, focused on traditional recipes served with a modern twist.
                 </p>
                 <img src={food} class="img" alt="ood" />
             </article>
