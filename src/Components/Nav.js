@@ -13,8 +13,7 @@ function Nav() {
             <nav>
                 <img src={Logo} className="logo" alt="logo"/>
                 <Link class="nav-elements" to="/">Home</Link>
-                <Link class="nav-elements" to="/bookingform">ABC</Link>
-                <Link class="nav-elements" to="/">ABC</Link>
+                <Link class="nav-elements" to="/bookingform">Book A Table</Link>
                 <Routes>
                     <Route path="/"  element={<><Home /><Specials /></>}></Route>
                     <Route path="/bookingform" element={<BookingForm arrItems={arrItems} setArrItems={setArrItems} />}></Route>
