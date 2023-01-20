@@ -2,6 +2,10 @@
     text-align: right;
 }
 
+.inline{
+    display: inline-block;
+}
+
 .main{
     margin: 1% 0%;
 }
@@ -182,4 +186,24 @@
     padding-bottom: 1em;
     font-size: 1em;
     font-weight: bold;
+}
+
+
+
+/* BOOKING FORM */
+
+.bookingForm{
+    width:60%;
+    margin: 0 auto;
+    background-color: orange;
+}
+
+.bookingh1{
+    margin:0 auto;
+    font-size: 3em;
+}
+
+.elements{
+    margin: 0 auto;
+    
 }

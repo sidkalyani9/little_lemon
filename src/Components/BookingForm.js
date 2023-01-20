@@ -1,6 +1,6 @@
-import React, {useReducer, useState} from "react";
+import React, { useState} from "react";
 import { useFormik } from "formik";
-// import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {
   Box,
   Button,
@@ -8,6 +8,7 @@ import {
   FormErrorMessage,
   FormLabel,
   Heading,
+  HStack,
   Input,
   Select,
   VStack,
@@ -27,7 +28,7 @@ const BookingForm = (props) => {
   });
 
   const[arrIndex,setIndex] = useState(-1);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function removeElem() {
     const newItems = [...props.arrItems];
@@ -38,7 +39,7 @@ const BookingForm = (props) => {
   function handleSubmit(e) {
     e.preventDefault();
     removeElem();
-    // navigate('/');
+    navigate('/');
   }
 
   const handleChange = (e) => {
@@ -46,7 +47,7 @@ const BookingForm = (props) => {
     setResTime((prev) => {
       return{...prev, [name]:value};
     })
-    if(e.target.name=="resTime"){
+    if(e.target.name==="resTime"){
       setIndex(() => {
         return(e.target.value);
       })
@@ -70,20 +71,22 @@ const BookingForm = (props) => {
 
   return (
     
-      <VStack className="contactForm" alignItems="flex-start">
-        <Heading as="h1" >
+      <VStack className="bookingForm" alignItems="flex-start">
+        <Heading as="h1" className="bookingh1">
           Book Now
         </Heading>
-        <Box p={6} rounded="md" w="100%">
           <form>
-            <VStack spacing={4}>
-              <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
-                <FormLabel htmlFor="date">Choose Date: </FormLabel>
+            <VStack p={10} className="elements">
+              <HStack className="formElement">
+              <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName} w="60%" className="formElement">
+                <FormLabel htmlFor="date" >Choose Date: </FormLabel>
                 <Input
                   id="date"
                   name="date"
                   type="date"
                   onChange={handleChange}
+                  w="50%"
+                  className="formElement"
                   // onChange={formik.handleChange}
                   // value={formik.values.firstName}
                   // onBlur={formik.handleBlur}
@@ -91,15 +94,16 @@ const BookingForm = (props) => {
                 />
                 <FormErrorMessage name="date">{formik.errors.date}</FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={formik.errors.restime && formik.touched.restime}>
+              <FormControl isInvalid={formik.errors.restime && formik.touched.restime} className="formElement">
                 <FormLabel htmlFor="resTime">Choose Time:</FormLabel>
-                <Select id="resTime" name="resTime" onChange={handleChange}>
-                  <option value="-1">Select an Item</option>
+                <Select id="resTime" name="resTime" onChange={handleChange} className="formElement">
+                  <option key="-1">Select an Option</option>
                   {props.arrItems?.map((items,index)=> (
-                    <option value={index}>{items}</option>
+                    <option key={index}>{items}</option>
                   ))}
                 </Select>
               </FormControl>
+              </HStack>
               <FormControl isInvalid={formik.errors.guests && formik.touched.guests}>
                 <FormLabel htmlFor="guests">Number of Guests:</FormLabel>
                 <Input
@@ -130,9 +134,8 @@ const BookingForm = (props) => {
                 Submit  
                 {/* {isLoading && <Spinner thickness='2px' spacing={4} marginLeft={2}></Spinner>} */}
               </Button>
-            </VStack>
+              </VStack>
           </form>
-        </Box>
       </VStack>
   );
 };
