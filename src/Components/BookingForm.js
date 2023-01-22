@@ -87,7 +87,7 @@ const BookingForm = (props) => {
                   name="date"
                   type="date"
                   onChange={handleChange}
-                  className="formElements"
+                  className="dateformElements"
                   // onChange={formik.handleChange}
                   // value={formik.values.firstName}
                   // onBlur={formik.handleBlur}

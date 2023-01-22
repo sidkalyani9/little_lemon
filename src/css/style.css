@@ -222,15 +222,25 @@
 .formElements{
     border-radius: 6px;
     height: 2em;
-    font-size: 1.1em;
+    font-size: 1em;
+    padding: 0.1em 0.3em;
+    width: 17em;
+    border: none;
+}
+
+.dateformElements{
+    border-radius: 6px;
+    height: 2em;
+    font-size: 1em;
     padding: 0.1em 0.3em;
     width: 13em;
     border: none;
 }
 
 .selectformElement{
-    width:13em;
-    height: 2em;
+    margin-left: -2.5em;
+    width:14.5em;
+    height: 2.2em;
     text-align: center !important;
     font-size: 1em;
     border-radius: 5px;
