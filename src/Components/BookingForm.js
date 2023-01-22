@@ -2,7 +2,6 @@ import React, { useState} from "react";
 import { useFormik } from "formik";
 import {useNavigate} from 'react-router-dom';
 import {
-  Box,
   Button,
   FormControl,
   FormErrorMessage,
@@ -26,6 +25,8 @@ const BookingForm = (props) => {
     guests: "1",
     occasion: ""
   });
+
+  console.log(resTimeState);
 
   const[arrIndex,setIndex] = useState(-1);
   const navigate = useNavigate();
@@ -71,72 +72,82 @@ const BookingForm = (props) => {
 
   return (
     
-      <VStack className="bookingForm" alignItems="flex-start">
+      <section className="bookingSection">
         <Heading as="h1" className="bookingh1">
-          Book Now
+          <span className="YellowNoResize">Book</span> Now
         </Heading>
           <form>
             <VStack p={10} className="elements">
-              <HStack className="formElement">
-              <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName} w="60%" className="formElement">
+              <HStack>
+              <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName} w="60%" className="formElements">
+                <VStack>
                 <FormLabel htmlFor="date" >Choose Date: </FormLabel>
                 <Input
                   id="date"
                   name="date"
                   type="date"
                   onChange={handleChange}
-                  w="50%"
-                  className="formElement"
+                  className="formElements"
                   // onChange={formik.handleChange}
                   // value={formik.values.firstName}
                   // onBlur={formik.handleBlur}
                   // {...formik.getFieldProps("date")}
                 />
+                </VStack>
                 <FormErrorMessage name="date">{formik.errors.date}</FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={formik.errors.restime && formik.touched.restime} className="formElement">
+              <FormControl isInvalid={formik.errors.restime && formik.touched.restime} className="formElements">
+                <VStack>
                 <FormLabel htmlFor="resTime">Choose Time:</FormLabel>
-                <Select id="resTime" name="resTime" onChange={handleChange} className="formElement">
+                <Select id="resTime" name="resTime" onChange={handleChange} className="selectformElement">
                   <option key="-1">Select an Option</option>
                   {props.arrItems?.map((items,index)=> (
                     <option key={index}>{items}</option>
                   ))}
                 </Select>
+                </VStack>
               </FormControl>
               </HStack>
-              <FormControl isInvalid={formik.errors.guests && formik.touched.guests}>
-                <FormLabel htmlFor="guests">Number of Guests:</FormLabel>
-                <Input
-                  id="guests"
-                  name="guests"
-                  type="number"
-                  min="1"
-                  max="10"
-                  onChange={handleChange}
-                  // onChange={formik.handleChange}
-                  // value={formik.values.firstName}
-                  // onBlur={formik.handleBlur}
-                  // {...formik.getFieldProps("date")}
-                />
-                <FormErrorMessage name="guests">{formik.errors.guests}</FormErrorMessage>
-              </FormControl>
+              <HStack className="check">
+                <FormControl isInvalid={formik.errors.guests && formik.touched.guests}>
+                  <VStack>
+                  <FormLabel htmlFor="guests">Number of Guests:</FormLabel>
+                  <Input
+                    id="guests"
+                    name="guests"
+                    type="number"
+                    min="1"
+                    max="10"
+                    value="1"
+                    onChange={handleChange}
+                    className="guestformElement"
+                    // onChange={formik.handleChange}
+                    // value={formik.values.firstName}
+                    // onBlur={formik.handleBlur}
+                    // {...formik.getFieldProps("date")}
+                  />
+                  <FormErrorMessage name="guests">{formik.errors.guests}</FormErrorMessage>
+                  </VStack>
+                </FormControl>
 
-              <FormControl isInvalid={formik.errors.occasion && formik.touched.occasion}>
-                <FormLabel htmlFor="occasion">Occasion: </FormLabel>
-                <Select id="occasion" name="occasion" onChange={handleChange}>
-                  <option>Birthday</option>
-                  <option>Anniversary</option>
-                </Select>
-              </FormControl>
-
-              <Button type="submit" colorScheme="purple" width="full" onClick={handleSubmit}>
+                <FormControl isInvalid={formik.errors.occasion && formik.touched.occasion}>
+                  <VStack>
+                  <FormLabel htmlFor="occasion">Occasion: </FormLabel>
+                  <Select id="occasion" name="occasion" onChange={handleChange} className="ocassionformElement">
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                  </Select>
+                  </VStack>
+                </FormControl>
+              </HStack>
+              <Button type="submit" colorScheme="purple" width="full" onClick={handleSubmit} class="submitBtn">
                  {/* isLoading={isLoading}> */}
-                Submit  
+                Confirm  
                 {/* {isLoading && <Spinner thickness='2px' spacing={4} marginLeft={2}></Spinner>} */}
               </Button>
               </VStack>
           </form>
-      </VStack>
+        </section>
   );
 };
 

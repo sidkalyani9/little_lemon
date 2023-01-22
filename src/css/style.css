@@ -2,6 +2,10 @@
     text-align: right;
 }
 
+.YellowNoResize{
+    color: rgb(244, 206, 20);
+}
+
 .inline{
     display: inline-block;
 }
@@ -206,4 +210,71 @@
 .elements{
     margin: 0 auto;
     
+}
+
+.bookingSection{
+    background-color: rgb(73, 94, 87);
+    color:white;
+    padding: 2% 0%;
+}
+
+
+.formElements{
+    border-radius: 6px;
+    height: 2em;
+    font-size: 1.1em;
+    padding: 0.1em 0.3em;
+    width: 13em;
+    border: none;
+}
+
+.selectformElement{
+    width:13em;
+    height: 2em;
+    text-align: center !important;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+
+
+.secondRow{
+    margin-top:15%;
+}
+
+.guestformElement{
+    width:13.5em;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.2em 0em;
+    border-radius: 5px;
+    height:1.6em;
+    border:none;
+}
+
+.check{
+    margin-top: 3em !important;
+    width:29em;
+}
+
+.ocassionformElement{
+    width:14.35em;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.2em 0em;
+    border-radius: 5px;
+    height:2em;
+    border:none;
+    margin-left: 0.7em;
+}
+
+.submitBtn{
+    margin-top:2em !important;
+    width:29em;
+    font-size: 1em;
+    height:2.5em;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(244, 206, 20);
 }
