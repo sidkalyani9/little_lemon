@@ -4,10 +4,18 @@ import BookingForm from './BookingForm';
 import Home from './Home';
 import Specials from './Specials';
 import { useState } from 'react';
+import SuccessfulBooking from './SuccessfulBooking';
 
 function Nav() {
 
-    const [arrItems,setArrItems] = useState(["17:00","18:00","19:00","20:00","21:00","22:00",]);
+    const initializeTimes = (date) => {
+        // return(fetchAPI(date));
+        return (['17:00','18:00','19:00','20:00','21:00','22:00'])
+    }
+
+    const [arrItems,setArrItems] = useState(initializeTimes());
+
+
     return(
         <header class="nav">
             <nav>
@@ -16,7 +24,8 @@ function Nav() {
                 <Link class="nav-elements" to="/bookingform">Book A Table</Link>
                 <Routes>
                     <Route path="/"  element={<><Home /><Specials /></>}></Route>
-                    <Route path="/bookingform" element={<BookingForm arrItems={arrItems} setArrItems={setArrItems} />}></Route>
+                    <Route path="/bookingform" element={<BookingForm arrItems={arrItems} setArrItems={setArrItems} initializeTimes={initializeTimes}/>}></Route>
+                    <Route path="/successful"  element={<SuccessfulBooking />}></Route>
                 </Routes>
             </nav>
         </header>
