@@ -112,7 +112,7 @@
     }
     .card{
         margin:2em 15%;
-        height:45vh;
+        height:27em;
         border-radius: 20px;
         padding:0em;
         display: grid;
@@ -123,12 +123,18 @@
         
     }
 
+    .cardHeading{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin:-0.4em 1.2em -3em 0em;
+    }
+
     .cardBtn{
         border:none;
         text-align: left;
         background-color: transparent;
         padding-left: 6.5vw;
-        padding-bottom: 1em;
+        margin-bottom: -1em;
         font-size: 1em;
         font-weight: bold;
     }
@@ -185,6 +191,12 @@
         max-width: 270px;
         background-color: rgb(236, 236, 236);
         
+    }
+
+    .cardHeading{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin:-0.4em 1.2em -3em 0em;
     }
 
     .cardBtn{
@@ -245,11 +257,7 @@
     height:100%;
 }
 
-.cardHeading{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin:-0.4em 1.2em 0em -2em;
-}
+
 
 .card .alignRight{
     color:orange;
