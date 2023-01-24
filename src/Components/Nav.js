@@ -5,6 +5,7 @@ import Home from './Home';
 import Specials from './Specials';
 import { useState } from 'react';
 import SuccessfulBooking from './SuccessfulBooking';
+import Booking from './Booking';
 
 function Nav() {
 
@@ -21,9 +22,14 @@ function Nav() {
             <nav>
                 <img src={Logo} className="logo" alt="logo"/>
                 <Link class="nav-elements" to="/">Home</Link>
-                <Link class="nav-elements" to="/bookingform">Book A Table</Link>
+                <Link class="nav-elements" to="/">About</Link>
+                <Link class="nav-elements" to="/">Menu</Link>
+                <Link class="nav-elements" to="/">Reservations</Link>
+                <Link class="nav-elements" to="/">Order Online</Link>
+                <Link class="nav-elements" to="/">Login</Link>
                 <Routes>
                     <Route path="/"  element={<><Home /><Specials /></>}></Route>
+                    <Route path="/book"  element={<Booking />}></Route>
                     <Route path="/bookingform" element={<BookingForm arrItems={arrItems} setArrItems={setArrItems} initializeTimes={initializeTimes}/>}></Route>
                     <Route path="/successful"  element={<SuccessfulBooking />}></Route>
                 </Routes>

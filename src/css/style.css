@@ -39,11 +39,11 @@
 
 .nav-elements{
     display: inline-block;
-    margin:0% 1% 1% 0%;
-    padding:0.7em 1.75em !important;
+    margin:0% 0.5% 1% 0%;
+    padding:0.7em 1em !important;
     text-decoration: none;
     color:black;
-    font-size: 1.5em;
+    font-size: 1em;
     transition: 0.5s;
 }
 
@@ -62,6 +62,21 @@
     height:20em;
     width:100%;
     background-color: rgb(73, 94, 87);
+}
+
+.btnHome{
+    height:4vh;
+    margin-top: 6%;
+    width:10vw;
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(244, 206, 20);
+    font-size: 0.7em;
+    font-weight: bold;
+}
+.btnHome:hover{
+    cursor: pointer;
+    background-color: rgb(153, 127, 0);
 }
 
 .home .content{
@@ -96,16 +111,60 @@
         width:80%;
     }
     .card{
-        margin:2em 6.5em 0em 6.5em;
+        margin:2em 15%;
         height:80%;
-        border-radius: 20px;;
+        border-radius: 20px;
         padding:0em;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 40% 15% 35% 5%;
         background-color: rgb(236, 236, 236);
-        width:80%;
+        width:95%;
         
+    }
+
+    .cardBtn{
+        border:none;
+        text-align: left;
+        background-color: transparent;
+        padding-left: 6.5vw;
+        padding-bottom: 1em;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .btn{
+        vertical-align: baseline !important;
+        font-size: 0.7em !important;
+        background-color:rgb(244, 206, 20);
+        box-shadow: none;
+        border-radius: 16px;
+        border:none;
+        font-weight: bold;
+        max-width: 200px;
+        margin-right: 3vw !important;
+        height:4em;
+    }
+
+
+    .font1_5em{
+        font-size: 1em;
+    }
+
+    .para{
+        font-size: 0.5em !important;
+    }
+
+    .img{
+        width:6.4em !important;
+        margin-left: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .btnHome{
+        width:10em;
+        margin-bottom: 1em;
+        font-size: 0.8em;
     }
 }
 
@@ -126,6 +185,16 @@
         max-width: 270px;
         background-color: rgb(236, 236, 236);
         
+    }
+
+    .cardBtn{
+        border:none;
+        text-align: left;
+        background-color: transparent;
+        padding-left: 2vw;
+        padding-bottom: 1em;
+        font-size: 1em;
+        font-weight: bold;
     }
 }
 
@@ -192,15 +261,7 @@
     font-weight: 150;
 }
 
-.cardBtn{
-    border:none;
-    text-align: left;
-    background-color: transparent;
-    padding-left: 2vw;
-    padding-bottom: 1em;
-    font-size: 1em;
-    font-weight: bold;
-}
+
 
 
 
