@@ -115,7 +115,7 @@ const BookingForm = (props) => {
                 <VStack>
                 <FormLabel htmlFor="resTime">Choose Time:</FormLabel>
                 <Select id="resTime" name="resTime" onChange={handleChange} className="selectformElement">
-                  <option key="-1">Select an Option</option>
+                  <option key="-1">16:00</option>
                   {props.arrItems?.map((items,index)=> (
                     <option key={index}>{items}</option>
                   ))}

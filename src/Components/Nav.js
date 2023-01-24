@@ -6,6 +6,7 @@ import Specials from './Specials';
 import { useState } from 'react';
 import SuccessfulBooking from './SuccessfulBooking';
 import Booking from './Booking';
+import MediaQuery from 'react-responsive';
 
 function Nav() {
 
@@ -23,10 +24,12 @@ function Nav() {
                 <img src={Logo} className="logo" alt="logo"/>
                 <Link class="nav-elements" to="/">Home</Link>
                 <Link class="nav-elements" to="/">About</Link>
+                <MediaQuery minWidth={880}>
                 <Link class="nav-elements" to="/">Menu</Link>
                 <Link class="nav-elements" to="/">Reservations</Link>
                 <Link class="nav-elements" to="/">Order Online</Link>
                 <Link class="nav-elements" to="/">Login</Link>
+                </MediaQuery>
                 <Routes>
                     <Route path="/"  element={<><Home /><Specials /></>}></Route>
                     <Route path="/book"  element={<Booking />}></Route>
