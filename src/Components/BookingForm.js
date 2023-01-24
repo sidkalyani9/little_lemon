@@ -64,6 +64,7 @@ const BookingForm = (props) => {
 
   const formik = useFormik({
     initialValues: {
+      guests:1,
       date:"",
       resTime:"Select an Option",
       occasion:"Birthday",
@@ -125,7 +126,7 @@ const BookingForm = (props) => {
               <HStack className="check">
                 <FormControl isInvalid={formik.errors.guests && formik.touched.guests}>
                   <VStack>
-                  <FormLabel htmlFor="guests">Number of Guests:</FormLabel>
+                  <FormLabel htmlFor="guests" className="guestsLabel">Number of Guests:</FormLabel>
                   <Input
                     id="guests"
                     name="guests"

@@ -366,6 +366,83 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:700px) {
+    .formElements{
+        border-radius: 6px;
+        height: 2em;
+        font-size: 1em;
+        padding: 0.1em 0.3em;
+        width: 8em;
+        border: none;
+    }
+    
+    .dateformElements{
+        border-radius: 6px;
+        height: 2em;
+        font-size: 1em;
+        padding: 0.1em 0.3em;
+        width: 8em;
+        border: none;
+    }
+    
+    .selectformElement{
+        margin-left: 0em;
+        width:8em;
+        height: 2.2em;
+        text-align: center !important;
+        font-size: 1em;
+        border-radius: 5px;
+        border: none;
+        background-color: white;
+    }
+    
+    
+    .secondRow{
+        margin-top:15% !important;
+    }
+    
+    .guestformElement{
+        width:8.6em;
+        font-size: 1em;
+        text-align: center;
+        padding: 0.2em 0em;
+        border-radius: 5px;
+        height:1.6em;
+        border:none;
+    }
+    
+    .check{
+        margin-top: 3em !important;
+        margin-left: -8.5em !important;
+        width:9em;
+        height: 5em;
+    }
+    
+    .ocassionformElement{
+        width:8em;
+        font-size: 1em;
+        text-align: center;
+        padding: 0.2em 0em;
+        border-radius: 5px;
+        height:2em;
+        border:none;
+        margin-left: 0.7em;
+    }
+    
+    .submitBtn{
+        margin-top:2em !important;
+        width:18em;
+        font-size: 1em;
+        height:2.5em;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(244, 206, 20);
+    }
+    .guestsLabel{
+        font-size: 0.85em !important;
+    }
+}
+
 /* Successful Booking Page */
 
 .successfulSection{
